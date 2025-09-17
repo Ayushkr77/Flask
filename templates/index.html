@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask</title>
-</head>
-<body>
-    This is my page
-</body>
-</html>
+{% extends 'base.html' %}   <!-- Inherits the structure from base.html. -->
+
+{% block head %}
+    <!-- Currently empty, but you could add custom <script> or <style> just for this page. -->
+{% endblock %}
+
+{% block body %}
+<h1>Template</h1>   <!-- Replaces the body block in base.html with your content -->
+{% endblock %}
+
+<!-- Benefit of Jinja: You don’t repeat <head>, <html>, <body>, CSS links in every page. Only write unique content in child templates. -->

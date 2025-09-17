@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Flask App{% endblock %}</title>   <!-- {% block title %} → Placeholder for the page title (child templates can override it). -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}   <!-- {% block head %} → Extra content (like meta tags, custom scripts) can be inserted by child templates. -->
+</head>
+<body>
+    {% block body %}{% endblock %}  <!-- Jinja syntax-->    <!-- {% block body %} → The main content area of the page. Child templates will replace this. If we write something inside it, it acts as default content. Child templates can override it (replace it) or extend it with {{ super() }}. -->
+
+
+    <!-- base.html is like a blueprint for all pages. -->
+</body>
+</html>
