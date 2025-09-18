@@ -2,3 +2,24 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+
+/* Table styling */
+table {
+    border-collapse: collapse; /* merge borders */
+    width: 80%;               /* optional width */
+    margin: 20px 0;           /* spacing */
+}
+
+th, td {
+    border: 1px solid #000;   /* black borders */
+    padding: 8px;             /* space inside cells */
+    text-align: left;         /* align text */
+}
+
+th {
+    background-color: #f2f2f2; /* optional header color */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* optional striped rows */
+}
