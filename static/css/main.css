@@ -1,25 +1,102 @@
+/* Reset */
 body {
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* light background */
+    color: #333;
+}
+
+/* Container */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* bootstrap-like blue */
 }
 
 /* Table styling */
 table {
-    border-collapse: collapse; /* merge borders */
-    width: 80%;               /* optional width */
-    margin: 20px 0;           /* spacing */
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
 }
 
 th, td {
-    border: 1px solid #000;   /* black borders */
-    padding: 8px;             /* space inside cells */
-    text-align: left;         /* align text */
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
 }
 
 th {
-    background-color: #f2f2f2; /* optional header color */
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* optional striped rows */
+    background-color: #f9f9f9;
+}
+
+/* Action links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Update form */
+form[action^="/update"] {
+    flex-direction: column;
+    align-items: center;
+}
+
+form[action^="/update"] input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
 }
